@@ -9,12 +9,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import dsAlgo_Driverfactory.DriverFactory;
-import dsAlgo_PageObject.ALandingPage;
 import dsAlgo_PageObject.BHomePage;
 import dsAlgo_Utilities.ConfigReader;
 import dsAlgo_Utilities.LoggerLoad;
+import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
-import io.cucumber.java.AfterStep;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.Scenario;
 
@@ -47,7 +46,7 @@ public class Hooks {
 	try {
 		home.click_Btn();
 	} catch (InterruptedException e) {
-		// TODO Auto-generated catch block
+		
 		e.printStackTrace();
 	}
 	}
@@ -60,7 +59,7 @@ public class Hooks {
 	}
 	
 	
-	@AfterStep(order=0)//for After it will start from 1 and then 0
+	@After(order=0)//for After it will start from 1 and then 0
 	public void tearDown(Scenario scenario)
 	{
 		if(scenario.isFailed())//take ScreenShot;
