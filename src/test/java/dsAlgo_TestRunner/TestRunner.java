@@ -35,12 +35,12 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		plugin = {"pretty", "json:target/cucmbereport.json",
+		plugin = {"pretty","html:target/cucumber" ,"json:target/cucumber.json",
 				 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
 				 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 		monochrome = true,
-		features = {"src/test/resources/features"},
-		glue = {"stepdefinition", "hooks"}
+		features = {"src/test/resources/Features"},
+		glue = {"dsAlgo_StepDefinition","hooks"}
 		)
 
 public class TestRunner{
