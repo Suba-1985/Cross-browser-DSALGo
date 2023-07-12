@@ -60,7 +60,7 @@ public class Hooks {
 	}
 	
 	
-	@AfterStep(order=1)//for After it will start from 1 and then 0
+	@AfterStep(order=0)//for After it will start from 1 and then 0
 	public void tearDown(Scenario scenario)
 	{
 		if(scenario.isFailed())//take ScreenShot;

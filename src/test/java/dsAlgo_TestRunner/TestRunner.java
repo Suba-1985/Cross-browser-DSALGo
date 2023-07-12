@@ -1,32 +1,51 @@
 package dsAlgo_TestRunner;
 
-	import org.testng.annotations.DataProvider;
+//	import org.testng.annotations.DataProvider;
+//
+//	import io.cucumber.junit.CucumberOptions;
+//	import io.cucumber.testng.AbstractTestNGCucumberTests;
+//
+//	@io.cucumber.testng.CucumberOptions(
+//	plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}, //reporting purpose
+//	monochrome=false,  //console output color
+//	 //tags from feature file
+//	features = {"src/test/resources/Features"},
+//	tags = " "
+//			,	
+//	//tags={"@Login"}, //location of feature files (should be in src/test/reso
+//	glue={"dsAlgo_StepDefinition","hooks"})//location of  step definition files
+//	public class TestRunner  extends AbstractTestNGCucumberTests{
+//		
+//		@Override
+//	    @DataProvider(parallel = false)
+//	    public Object[][] scenarios() {
+//					
+//			return super.scenarios();
+//	    }
+//		
+//		}	
+	
+	
 
-	import io.cucumber.junit.CucumberOptions;
-	import io.cucumber.testng.AbstractTestNGCucumberTests;
 
-	@io.cucumber.testng.CucumberOptions(
-	plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}, //reporting purpose
-	monochrome=false,  //console output color
-	 //tags from feature file
-	features = {"src/test/resources/Features"},
-	tags = " "
-			,	
-	//tags={"@Login"}, //location of feature files (should be in src/test/reso
-	glue={"dsAlgo_StepDefinition","hooks"})//location of  step definition files
-	public class TestRunner  extends AbstractTestNGCucumberTests{
-		
-		@Override
-	    @DataProvider(parallel = false)
-	    public Object[][] scenarios() {
-					
-			return super.scenarios();
-	    }
-		
-		}	
-	
-	
-	
+import org.junit.runner.RunWith;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+		plugin = {"pretty", "json:target/cucmbereport.json",
+				 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
+				 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
+		monochrome = true,
+		features = {"src/test/resources/features"},
+		glue = {"stepdefinition", "hooks"}
+		)
+
+public class TestRunner{
+
+}
 	
 	
 	
