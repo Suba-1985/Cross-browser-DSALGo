@@ -35,7 +35,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		plugin = {"pretty","html:target/cucumber" ,"json:target/cucumber.json",
+		plugin = {"pretty","html:target/cucumber.html" ,"json:target/cucumber.json",
 				 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
 				 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 		monochrome = true,
