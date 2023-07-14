@@ -8,6 +8,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import dsAlgo_Utilities.LoggerLoad;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
@@ -20,12 +21,12 @@ public class DriverFactory {
 		System.out.println("driver : initializing the driver first");
 		
 		if(browser.equals("chrome"))
-		{
+		{   LoggerLoad.info("This browser is " + browser);
 			WebDriverManager.chromedriver().setup();
 			tlDriver.set(new ChromeDriver());			
 		}
-		else if(browser.equalsIgnoreCase("edge"))
-		{
+		else if(browser.equalsIgnoreCase("Edge"))
+		{    LoggerLoad.info("This browser is " + browser);
 			WebDriverManager.edgedriver().setup();
 			tlDriver.set(new EdgeDriver());
 		}

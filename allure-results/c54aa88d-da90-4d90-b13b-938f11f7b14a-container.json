@@ -1,0 +1,1 @@
+{"uuid":"c54aa88d-da90-4d90-b13b-938f11f7b14a","name":"TestEdge","children":["5e5b1748-ee7a-45a3-b4aa-2614f9e52676"],"befores":[{"name":"browserType","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1689294135434,"stop":1689294146596}],"afters":[],"start":1689294135413,"stop":1689294148263}

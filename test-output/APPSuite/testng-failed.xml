@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite configfailurepolicy="continue" parallel="classes" name="Failed suite [APPSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="classes" name="TestChrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="dsAlgo_TestRunner.TestRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="115 116 117 118 119 120 121 122 123 124"/>
+          <include name="tearDownClass"/>
+          <include name="browserType"/>
+        </methods>
+      </class> <!-- dsAlgo_TestRunner.TestRunner -->
+    </classes>
+  </test> <!-- TestChrome(failed) -->
+</suite> <!-- Failed suite [APPSuite] -->

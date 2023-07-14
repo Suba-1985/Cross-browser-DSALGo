@@ -7,6 +7,7 @@ import java.util.Properties;
 
 public class ConfigReader {
 	private static Properties prop;
+	private static String browserName=null;
 	
 	public Properties init_prop() throws IOException
 	{
@@ -24,6 +25,25 @@ public class ConfigReader {
 			e.printStackTrace();
 		}
 		return prop;
+	}
+//	
+//	public static void setBrowserType(String browser)
+//	{
+//		browserName=browser;
+//		System.out.println("config set browser :" + browserName);
+//
+//	}
+//	
+	public static String getBrowserType(String browser) throws Throwable
+	{
+	browserName=browser;
+	System.out.println("config get browser :" + browserName);
+
+	//	if(browserName!=null)		
+					return browserName;
+		
+	//	else
+	//		throw new RuntimeException("browser not specified in the testng.xml");
 	}
 	
 	public String getUserName()

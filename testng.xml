@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Test">
+<suite name="parallel test Suite" thread-count="2" verbose="1" parallel="tests" >
+	 
+  <test  name="TestEdge">	 
+	   <parameter name="browser" value="Edge"/>	   
     <classes>
-      <class name="dsAlgo_TestRunner.TestRunner"/>
+      <class name="dsAlgo_TestRunner.TestRunner"></class>
     </classes>
+    </test> 
+     
+     <test  name="TestChrome">
+	<parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="dsAlgo_TestRunner.TestRunner"></class>
+   </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
