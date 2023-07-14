@@ -62,7 +62,7 @@
                     <configuration>
                         <filesets>
                             <fileset>
-                                <directory>Z_DS-Algo_BDD2\allure-results</directory>
+                                <directory>Z_DS-Algo_BDDcopy\allure-results</directory>
                             </fileset>
                         </filesets>
                     </configuration>
