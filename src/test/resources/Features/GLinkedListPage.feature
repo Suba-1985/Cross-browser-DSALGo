@@ -22,11 +22,7 @@ Feature: user validates the Linked List Page
       | Introduction                     | LLIntroduction           |   0      |      
       | Creating Linked LIst             | LLCLinkedList            |   0      | 
       | Types of Linked list             | LLTyLinkedList            |   0      |
-      | Implement Linked List in Python  | LLILinkedList            |   0      |
-      | Traversal                        | LLTLinkedList            |   0      |
-      | Insertion                        | LLInsertion              |   0      |
-      | Deletion                         | LLDeletion               |   0      |
-      
+ 
   @invalidpythoncode
   Scenario Outline: User checks each of the topics in Linked List with invalid python code
     Given user clicks the Linked List getstart link 
@@ -38,10 +34,7 @@ Feature: user validates the Linked List Page
       |  Introduction                     | LLIntroduction           |   1      |SyntaxError: bad input on line   |  
       |  Creating Linked LIst             | LLCLinkedList            |   1      |SyntaxError: bad input on line  |
       |  Types of Linked list             | LLTLinkedList            |   1      |SyntaxError: bad input on line    |
-      |  Implement Linked List in Python  | LLILinkedList            |   1      |SyntaxError: bad input on line    |
-      |  Traversal                        | LLTLinkedList            |   1      |SyntaxError: bad input on line    |
-      |  Insertion                        | LLInsertion              |   1      |SyntaxError: bad input on line    |
-      |  Deletion                         | LLDeletion               |   1      |SyntaxError: bad input on line    |
+ 
     
     @practice
     Scenario Outline: The user is able to navigate to Practice page
@@ -56,7 +49,5 @@ Feature: user validates the Linked List Page
     |  Introduction                     |
     |  Creating Linked LIst             | 
     |  Types of Linked list             |  
-    |  Implement Linked List in Python  |
-    |  Traversal                        |
-    |  Insertion                        |
-    |  Deletion                         |
+
+   

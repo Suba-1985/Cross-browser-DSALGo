@@ -67,6 +67,7 @@ public class Hooks {
 	{
 		LoggerLoad.info("Closing App");
 		driver.close();
+	
 	}
 	
 	
