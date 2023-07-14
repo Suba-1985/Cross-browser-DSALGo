@@ -11,9 +11,10 @@ import hooks.Hooks;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 	@io.cucumber.testng.CucumberOptions(
-	plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-			"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}, //reporting purpose
-	monochrome=false,  //console output color
+			plugin = {"pretty","html:target/cucumber.html" ,"json:target/cucumber.json",
+					 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
+					 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}, //reporting purpose
+	monochrome=true,  //console output color
 	 //tags from feature file
 	features = {"src/test/resources/Features"},
 	tags = " "
